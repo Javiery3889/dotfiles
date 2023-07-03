@@ -189,6 +189,17 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- Default PDF method
+vim.g.vimtex_view_method = 'skim'
+
+-- spell checker
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+
+-- Default tab size
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
