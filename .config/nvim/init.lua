@@ -425,7 +425,7 @@ cmp.setup {
     ['<C-Space>'] = cmp.mapping.complete {},
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+      select = false,
     },
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -455,9 +455,5 @@ cmp.setup {
 require('onedark').setup {
     style = 'darker'
 }
-
-vim.g.vimtex_view_method = 'skim'
-vim.opt.spelllang = 'en_us'
-vim.opt.spell = true
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
