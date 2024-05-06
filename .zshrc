@@ -49,6 +49,7 @@ zinit light sindresorhus/pure
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ls='eza'
 alias cat='bat'
+alias vim='nvim'
 
 # tries first to complete the current word exactly as its written, before trying case-insensitive or other matches
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
