@@ -124,7 +124,7 @@ shift + cmd - left : yabai -m window --warp west
 # ctrl + alt - z  : yabai -m display --focus prev
  ctrl + cmd - 1  : yabai -m display --focus 1
  ctrl + cmd - 2  : yabai -m display --focus 2
- ctrl + cmd - 3  : yabai -m display --focus 
+ ctrl + cmd - 3  : yabai -m display --focus 3
 
 # toggle gap between windows on the current space
 alt - g : yabai -m space --toggle gap && yabai -m space --toggle padding
@@ -159,6 +159,12 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 
 # float / unfloat window and center on screen
 # alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# hide window
+alt - h: yabai -m window --toggle float --move abs:10000:10000
+
+# unhilde window
+shift + alt - h: yabai -m window --toggle float
 
 # toggle sticky(+float), picture-in-picture
 # alt - p : yabai -m window --toggle sticky --toggle pip
