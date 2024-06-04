@@ -23,11 +23,6 @@ return {
         -- this is equalent to setup({}) function
     },
 
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        opts = {},
-    },
 
     -- NOTE: no jsx/tsx support
     {
@@ -67,4 +62,32 @@ return {
             })
         end
     },
+
+
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        opts = {
+            indent = {
+                char = "│",
+                tab_char = "│",
+            },
+            scope = { show_start = false, show_end = false },
+            exclude = {
+                filetypes = {
+                    "help",
+                    "alpha",
+                    "dashboard",
+                    "neo-tree",
+                    "Trouble",
+                    "trouble",
+                    "lazy",
+                    "mason",
+                    "notify",
+                    "toggleterm",
+                    "lazyterm",
+                },
+            },
+        },
+        main = "ibl",
+    }
 }
