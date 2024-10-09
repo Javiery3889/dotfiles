@@ -16,25 +16,21 @@ return {
             -- Enable telescope-fzf-native
             pcall(require('telescope').load_extension, 'fzf')
 
-            wk.register({
-                f = {
-                    f = { builtin.find_files, "Telescope [F]ind [F]iles"},
-                    g = {builtin.live_grep, "Telescope Live [G]rep"},
-                    b = {builtin.buffers, "Telescope [B]uffers"},
-                    h = {builtin.help_tags, "Telescope Help [T]ags"},
-                    d = { extensions.file_browser.file_browser, "Telescope File Browser"},
-                }
-            }, { prefix = "<leader>" })
+            wk.add({
+                    {"<leader>ff", builtin.find_files, desc = "Telescope [F]ind [F]iles"},
+                    {"<leaderfg", builtin.live_grep, desc = "Telescope Live [G]rep"},
+                    {"<leader>fb", builtin.buffers, desc = "Telescope [B]uffers"},
+                    {"<leader>ft", builtin.help_tags, desc = "Telescope Help [T]ags"},
+                    {"<leader>fd", extensions.file_browser.file_browser, desc = "Telescope File Browser"},
+            })
 
-            wk.register({
-                g = {
+            wk.add({
                     name = 'Telescope Git',
-                    f = { builtin.git_files, 'Git files' },
-                    c = { builtin.git_commits, 'Git Commits' },
-                    b = { builtin.git_branches, 'Git Branches' },
-                    s = { builtin.git_stash, 'Git Stash' },
-                }
-            }, { prefix = "<leader>" })
+                    {"<leader>gf", builtin.git_files, desc = 'Git files' },
+                    {"<leader>gc", builtin.git_commits, desc = 'Git Commits' },
+                    {"<leader>gb", builtin.git_branches, desc = 'Git Branches' },
+                    {"<leader>gs", builtin.git_stash, desc = 'Git Stash' },
+            })
         end,
     },
 }
